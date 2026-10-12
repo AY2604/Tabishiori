@@ -1,0 +1,983 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f2f5f2;
+  color: #24352c;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+
+.hero {
+  background: #174a37;
+  color: white;
+  padding: 28px 20px 22px;
+  border-radius: 0 0 24px 24px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin: 8px 0;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #d9eddf;
+}
+
+.date-label {
+  display: block;
+  margin-top: 18px;
+}
+
+input, textarea, button {
+  font: inherit;
+}
+
+input[type="date"], textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #cbd5ce;
+  border-radius: 10px;
+  background: white;
+}
+
+.offline {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #d9eddf;
+}
+
+main {
+  max-width: 680px;
+  margin: auto;
+  padding: 18px 14px 40px;
+}
+
+main h2 {
+  font-size: 22px;
+}
+
+.hint, .footnote {
+  color: #5a685f;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.stop {
+  display: flex;
+  gap: 14px;
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin: 14px 0;
+  box-shadow: 0 2px 8px #183b2610;
+}
+
+
+.time {
+  flex: 0 0 82px;
+  min-width: 82px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--theme-color);
+  text-align: center;
+  padding-top: 3px;
+  box-sizing: border-box;
+}
+
+.stop-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.stop h3 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.stop p {
+  color: #526157;
+  line-height: 1.6;
+}
+
+.completed {
+  border-left: 4px solid #39845b;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.memo-label {
+  display: block;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  margin-top: 12px;
+  background: #176342;
+  color: white;
+  font-weight: 700;
+}
+
+button.secondary {
+  background: white;
+  color: #176342;
+  border: 1px solid #176342;
+}
+
+.footnote {
+  margin-top: 20px;
+}
+
+.import-panel {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.import-panel input[type="file"] {
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.status {
+  color: #176342;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.heading-row h2 {
+  margin-bottom: 0;
+}
+
+.heading-row select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cbd5ce;
+  background: white;
+  font: inherit;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border-radius: 12px;
+  margin: 14px 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #e1e8e2;
+  vertical-align: top;
+}
+
+th {
+  background: #e5efe7;
+  white-space: nowrap;
+}
+
+td textarea {
+  min-width: 140px;
+}
+
+.category {
+  display: inline-block;
+  color: #176342;
+  background: #e5efe7;
+  border-radius: 6px;
+  padding: 4px 7px;
+  font-size: 12px;
+}
+
+.note {
+  background: #fff4dc;
+  border-radius: 8px;
+  padding: 9px;
+  font-size: 14px;
+}
+
+.date-text {
+  font-size: 12px;
+  color: #657168;
+}
+
+.screen-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.screen-tabs button {
+  flex: 1;
+  padding: 12px 6px;
+  border: 1px solid #cbd5ce;
+  border-radius: 10px;
+  background: white;
+  color: #244b35;
+  font-size: 13px;
+}
+
+.screen-tabs button.active {
+  background: #217346;
+  color: white;
+  border-color: #217346;
+}
+
+:root {
+  --theme-color: #217346;
+  --page-background: #ffffff;
+  --app-font-size: 16px;
+  --item-padding: 12px;
+}
+
+body {
+  background-color: var(--page-background);
+  font-size: var(--app-font-size);
+}
+
+.screen-tabs button.active,
+#save-settings {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+  color: #ffffff;
+}
+
+.stop {
+  padding: var(--item-padding);
+}
+
+.stop h3 {
+  font-size: 1.15em;
+}
+
+.stop p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+
+/* 日付選択：グリーン・ナチュラル */
+.daily-selector {
+  margin: 16px 0 20px;
+  padding: 14px;
+  background: #f3f7f2;
+  border: 1px solid #e0e9df;
+  border-radius: 16px;
+}
+
+.daily-selector-label {
+  margin: 0 0 12px;
+  color: #45634b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.date-scroller {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px 2px 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+
+.date-chip {
+  flex: 0 0 auto;
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 9px;
+  color: #45634b;
+  background: #ffffff;
+  border: 1px solid #d5e2d3;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.date-chip-day {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.date-chip-date {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.date-chip.active {
+  color: #ffffff;
+  background: #416b4b;
+  border-color: #416b4b;
+  box-shadow: 0 3px 8px rgba(45, 85, 53, 0.18);
+}
+
+.date-chip:focus-visible {
+  outline: 3px solid #a6c9a7;
+  outline-offset: 2px;
+}
+
+.date-scroller .date-chip {
+  min-width: 60px !important;
+  width: 76px !important;
+  padding: 6px 4px !important;
+  gap: 3px !important;
+  box-sizing: border-box !important;
+  border-radius: 25px !important;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.date-scroller .date-chip-date {
+  font-size: 12px !important;
+}
+
+.date-scroller .date-chip.active {
+  border-radius: 25px !important;
+}
+
+
+/* 全体行程：左に日付、右に内容 */
+.overview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overview-item {
+  display: grid;
+  grid-template-columns: 94px minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 14px;
+  margin: 0;
+  box-shadow: 0 2px 8px #183b2610;
+}
+
+.overview-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 4px;
+  background: #e3ede0;
+  border-radius: 12px;
+  color: #31583b;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.overview-day {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.overview-date-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.overview-body {
+  min-width: 0;
+  padding: 4px 0;
+}
+
+.overview-body h3 {
+  margin: 0 0 8px;
+  color: #31583b;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.overview-body p {
+  margin: 0;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 400px) {
+  .overview-item {
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .overview-date-text {
+    font-size: 14px;
+  }
+
+  .overview-body h3 {
+    font-size: 15px;
+  }
+}
+
+
+/* 日付ごと・全体行程の切り替えタブ */
+.scope-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+  margin: 12px 0 16px;
+}
+
+.scope-tabs button {
+  flex: 1;
+  min-width: 0;
+  padding: 11px 8px;
+  border: 1px solid #d7e2d4;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #416b4b;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scope-tabs button.active {
+  background: #416b4b;
+  border-color: #416b4b;
+  color: #ffffff;
+}
+
+
+/* テーマカラー選択カード */
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 12px 0 24px;
+}
+
+.theme-card {
+  display: block;
+  padding: 14px;
+  border: 2px solid #e3e8df;
+  border-radius: 18px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.theme-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #183b2612;
+}
+
+.theme-card.selected {
+  border-color: var(--theme-color, #285943);
+  box-shadow: 0 0 0 2px #28594318;
+  background: #f8faf6;
+}
+
+.theme-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.theme-name {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #344638;
+}
+
+.theme-swatches {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.theme-swatch {
+  flex: 1;
+  height: 30px;
+  border-radius: 7px;
+  border: 1px solid #0000000a;
+}
+
+.theme-check {
+  display: block;
+  color: #647365;
+  font-size: 13px;
+}
+
+.theme-card.selected .theme-check {
+  color: var(--theme-color, #285943);
+  font-weight: 700;
+}
+
+.theme-card:focus-within {
+  outline: 2px solid var(--theme-color, #285943);
+  outline-offset: 3px;
+}
+
+@media (max-width: 480px) {
+  .theme-options {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .theme-card {
+    padding: 10px;
+    border-radius: 14px;
+  }
+
+  .theme-swatch {
+    height: 24px;
+  }
+}
+
+
+/* ===== 5色テーマ：各画面への反映 ===== */
+
+/* ページ全体 */
+body {
+  background: var(--page-background);
+  color: var(--theme-color);
+}
+
+/* 旅行タイトル・日程のヘッダー */
+.hero {
+  background: var(--theme-color);
+  color: #fff;
+}
+
+.hero .eyebrow,
+.hero .offline {
+  color: var(--theme-surface-color);
+}
+
+/* 行程・施設予約・連絡先などのメインタブ */
+.screen-tabs button {
+  background: var(--theme-surface-color);
+  color: var(--theme-color);
+  border-color: var(--theme-sub-color);
+}
+
+.screen-tabs button.active {
+  background: var(--theme-color);
+  color: #fff;
+  border-color: var(--theme-color);
+}
+
+/* 日付ごと・全体行程の切り替え */
+.scope-tabs button {
+  background: var(--theme-surface-color);
+  color: var(--theme-color);
+  border-color: var(--theme-sub-color);
+}
+
+.scope-tabs button.active {
+  background: var(--theme-color);
+  color: #fff;
+  border-color: var(--theme-color);
+}
+
+/* 日付選択エリア */
+.daily-selector {
+  background: var(--theme-surface-color);
+  border-color: var(--theme-sub-color);
+}
+
+.daily-selector-label {
+  color: var(--theme-color);
+}
+
+/* 日付選択ボタン */
+.date-chip {
+  background: #fff;
+  color: var(--theme-color);
+  border-color: var(--theme-sub-color);
+}
+
+.date-chip.active {
+  background: var(--theme-color);
+  color: #fff;
+  border-color: var(--theme-color);
+}
+
+.date-chip:focus-visible {
+  outline-color: var(--theme-accent-color);
+}
+
+/* 予定・施設・連絡先のカード */
+
+.stop,
+.import-panel,
+.table-wrap {
+  background: var(--theme-surface-color);
+}
+
+.overview-item {
+  background: color-mix(
+    in srgb,
+    var(--theme-sub-color) 8%,
+    transparent
+  );
+  border: 1px solid var(--theme-color);
+}
+
+/* 全体行程の日付欄 */
+.overview-date {
+  background: var(--theme-accent-color);
+  color: var(--theme-color);
+}
+
+/* 見出し */
+.stop h3,
+.overview-body h3,
+main h2 {
+  color: var(--theme-color);
+}
+
+/* 説明文・補足 */
+.stop p,
+.overview-body p,
+.hint,
+.footnote,
+.date-text {
+  color: var(--theme-color);
+}
+
+/* 表の見出し */
+th {
+  background: var(--theme-surface-color);
+  color: var(--theme-color);
+}
+
+/* カテゴリー表示が残っている場合 */
+.category {
+  color: var(--theme-color);
+  background: var(--theme-accent-color);
+}
+
+/* 通常のボタン */
+button:not(.date-chip):not(.screen-tabs button):not(.scope-tabs button) {
+  background: var(--theme-color);
+  border-color: var(--theme-color);
+  color: #fff;
+}
+
+/* 白いセカンダリーボタン */
+button.secondary {
+  background: var(--theme-surface-color);
+  color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+
+
+/* ===== 5色を使い分ける追加デザイン ===== */
+
+/* カードにテーマの枠線を加える */
+.stop,
+.overview-item,
+.import-panel {
+  border: 1px solid var(--theme-sub-color);
+}
+
+/* カードの見出しにメインカラー */
+.stop h3,
+.overview-body h3 {
+  color: var(--theme-color);
+}
+
+/* 全体行程の日付欄はアクセントカラー */
+.overview-date {
+  background: var(--theme-accent-color);
+  color: var(--theme-color);
+}
+
+/* 日付選択エリアはサブカラー */
+.daily-selector {
+  background: color-mix(
+    in srgb,
+    var(--theme-sub-color) 50%,
+    transparent
+  );
+  border: 1px solid var(--theme-sub-color);
+}
+
+/* 日付ボタンの枠にサブカラー */
+.date-chip {
+  border: 1px solid var(--theme-sub-color);
+}
+
+/* 未選択タブを白にする */
+.scope-tabs button:not(.active),
+.screen-tabs button:not(.active) {
+  border: 1px solid var(--theme-color);
+  background: #ffffff;
+  color: var(--theme-color);
+}
+
+/* 表の見出しにアクセントカラー */
+th {
+  background: var(--theme-accent-color);
+  color: var(--theme-color);
+}
+
+/* 入力欄の枠線 */
+input,
+textarea,
+select {
+  border-color: var(--theme-sub-color);
+}
+
+/* 補助情報の文字色 */
+.hint,
+.footnote,
+.date-text {
+  color: var(--theme-sub-color);
+}
+
+/* 補助ボタン */
+button.secondary {
+  background: var(--theme-surface-color);
+  color: var(--theme-color);
+  border-color: var(--theme-sub-color);
+}
+
+
+/* 枠線はシンプルに戻す */
+.stop,
+.overview-item,
+.import-panel {
+  border: none;
+}
+
+.daily-selector {
+  border: none;
+}
+
+.date-chip,
+.scope-tabs button,
+.screen-tabs button {
+  border: 1px solid #e0e5e0;
+}
+
+button.secondary {
+  border: 1px solid #e0e5e0;
+}
+
+input,
+textarea,
+select {
+  border-color: #dce3dc;
+}
+
+
+/* ヘッダーをテーマカラーに統一 */
+.hero {
+  background: var(--theme-color);
+  color: #fff;
+  border-radius: 0 0 24px 24px;
+}
+
+/* タイトル */
+.hero .hero-title,
+.hero h1 {
+  color: #fff;
+}
+
+/* 日程・旅行コード */
+.hero .hero-subtitle,
+.hero .hero-code {
+  color: var(--theme-surface-color);
+}
+
+/* オフライン表示 */
+.hero .offline {
+  color: var(--theme-surface-color);
+}
+
+
+.contact-card {
+  border: 1px solid var(--theme-color);
+  background: color-mix(
+    in srgb,
+    var(--theme-sub-color) 8%,
+    white
+  );
+}
+
+.contact-category {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid var(--theme-color);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--theme-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.contact-field {
+  margin-top: 16px;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--theme-color);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.contact-field p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-person {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.contact-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-phone-number {
+  font-size: 16px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-call {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--theme-color);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+.history-input-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.history-input-row label:first-child {
+  flex: 0 0 110px;
+}
+
+.history-input-row label:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-input-row input,
+.history-input-row select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+
+.history-record-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.history-record-heading .contact-category {
+  flex-shrink: 0;
+}
+
+.history-record-heading h3 {
+  margin: 0;
+}
+
+
+/* 記録フォーム：項目選択をかわいく */
+.history-input-row label:first-child select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  padding: 12px 28px 12px 12px;
+  border: 1.5px solid var(--theme-color);
+  border-radius: 14px;
+  background-color: var(--theme-surface-color, #f5f1e6);
+  color: var(--theme-color);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23879B83' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+}
+
+.history-input-row label:first-child select:focus {
+  outline: 2px solid var(--theme-sub-color);
+  outline-offset: 2px;
+}
+
+/* 項目と観光場所の入力欄の高さを統一 */
+.history-input-row {
+  align-items: flex-end;
+}
+
+.history-input-row label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.history-input-row label input,
+.history-input-row label select {
+  height: 46px;
+  margin-top: 6px;
+  box-sizing: border-box;
+}
